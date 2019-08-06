@@ -31,7 +31,6 @@ First phase release targeting Q3 2019.
 * Important: Note that the shopper’s history is not part of the recommendation context. Rather, that information is already included in the historical context, allowing the engine to prepare to provide recommendations as quickly as possible when they are requested.
 
 **Events** - Specific shopper actions/behaviors that are captured by the system and considered by the engine to inform recommendations.
-Events are always captured with the DateTime of occurence (this allows us to place less ‘weight’ on older events if/when desired).
 
 * Ex: The shopper purchased products X,Y,Z in order A.
 * Ex: The shopper viewed product X.
@@ -46,7 +45,34 @@ Events are always captured with the DateTime of occurence (this allows us to pla
 
 ## Events In-Depth
 
-Events will need to be handled in response to various business activities throughout Znode.
+* Events will need to be handled in response to various business activities throughout Znode.
+* Events are always captured with the DateTime of occurence (this allows us to place less ‘weight’ on older events if/where desired).
+
+### Event Types & Frequency
+
+Different types of events occur with different levels of freqency.
+
+#### Very Frequent
+
+Events that occur very frequently need to be handled carefully to avoid having the engine consume to many resources (CPU/RAM/HDD).
+
+Ex:
+
+* Shopper views a product.
+
+#### Somewhat Frequent
+
+Ex:
+
+* Shopper adds/removes cart items.
+
+#### Not Frequent
+
+Events that occur very rarely can safely be included in the engine's historical context.
+
+Ex:
+
+* Shopper places order.
 
 ## Functional Scope of First Phase(s)
 
