@@ -63,6 +63,7 @@ The above rules inform the matches, ie: which products should be recommended. Th
 
 ## Miscellaneous Notes
 
+* [Google Slide Deck](https://docs.google.com/presentation/d/1mjx_E4aaJiLSAMpjT-pEXV7Ry4YEeTtiVhyQ5evdowI/edit?usp=sharing)
 * Znode should gracefully degrade in the circumstance that the recommendation engine is unable to operate for any reason. In other words, the Web Store UI will simply display no banner of recommended products when either, (1) the engine is non-operable, or (2) no products were recommended.
   * Ex: The historical context was not yet built, so no recommendations can yet be made.
   * Ex: The engine in not functional due to a technical issue.
@@ -84,3 +85,7 @@ The above rules inform the matches, ie: which products should be recommended. Th
 ![Diagram](docs/_assets/sequence-diagram.svg)
 
 <a href="http://jgraph.github.io/drawio-github/edit-diagram.html?user=bsmith1310@gmail.com&org=bsmith1310&repo=znode-recs-engine-docs&path=docs/_assets/sequence-diagram.svg" target="_blank">Edit</a>
+
+## Testing
+
+TODO - Document
