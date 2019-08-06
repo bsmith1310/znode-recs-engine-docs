@@ -4,6 +4,14 @@ Function documentation relating to a new Recommendation Engine feature.
 
 First phase release targeting Q3 2019.
 
+## Phase 1
+
+![Diagram](docs/_assets/home-page.png)
+
+![Diagram](docs/_assets/cross-sell.png)
+
+![Diagram](docs/_assets/up-sell.png)
+
 ## Terminology
 
 **Recommendation Engine** - A system that recommends products that users are likely to buy. The rest of this document refers to this simply as the “engine”.
