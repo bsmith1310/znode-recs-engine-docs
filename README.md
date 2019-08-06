@@ -75,4 +75,4 @@ The above rules inform the matches, ie: which products should be recommended. Th
 
 ![Diagram](docs/_assets/sequence-diagram.svg)
 
-<a href="http://jgraph.github.io/drawio-github/edit-diagram.html?user=bsmith1310@gmail.com&org=amlacommerce&repo=znode-docs-test&path=docs/_assets/sequence-diagram.svg" target="_blank">Edit</a>
+<a href="http://jgraph.github.io/drawio-github/edit-diagram.html?user=bsmith1310@gmail.com&org=bsmith1310&repo=znode-recs-engine-docs&path=docs/_assets/sequence-diagram.svg" target="_blank">Edit</a>
