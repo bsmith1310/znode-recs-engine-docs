@@ -70,3 +70,9 @@ The above rules inform the matches, ie: which products should be recommended. Th
       * ... this would make the API’s/engine’s life easier, at the expense of unnecessary results transferring to Web Store, and the Web Store bearing the burden of doing the filtering.
     * Consider these points makes me lean towards having the API service logic that wraps the engine be responsible for filtering the products.
 * How to handle products like “gatorade”, which Justin King gives as an example of a product that tends to be purchased on many orders, but isn’t necessarily related to the products with which it is purchased.
+
+## Sequence Diagram
+
+![Diagram](docs/_assets/sequence-diagram.svg)
+
+<a href="http://jgraph.github.io/drawio-github/edit-diagram.html?user=bsmith1310@gmail.com&org=amlacommerce&repo=znode-docs-test&path=docs/_assets/sequence-diagram.svg" target="_blank">Edit</a>
