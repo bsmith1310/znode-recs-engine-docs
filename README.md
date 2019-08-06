@@ -74,9 +74,7 @@ When shopper A browses the store (while being logged in):
 * The PDP will recommend products that any shoppers have purchased together with the product currently being viewed.
 * The Cart Page will recommend products that any shoppers have purchased together with any of the products currently in the cart.
 
-<img src="docs/_assets/home-page.png" alt="drawing" width="30%"/>
-<img src="docs/_assets/cross-sell.png" alt="drawing" width="30%"/>
-<img src="docs/_assets/up-sell.png" alt="drawing" width="30%"/>
+<img src="docs/_assets/home-page.png" alt="drawing" width="33%"/><img src="docs/_assets/cross-sell.png" alt="drawing" width="33%"/><img src="docs/_assets/up-sell.png" alt="drawing" width="33%"/>
 
 The above rules inform the matches, ie: which products should be recommended. The next step is determining the score (determining display order) of those recommended products (similar to the search functionality's 'relevancy' score). Long term, this value can be calculated by taking many factors into consideration, but for the first phase I want to start with #1. We can also discuss whether we think #2 would be good to do.
 
