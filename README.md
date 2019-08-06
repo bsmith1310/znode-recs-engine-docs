@@ -39,6 +39,7 @@ First phase release targeting Q3 2019.
 
 * Events will need to be handled in response to various business activities throughout Znode.
 * Events are always captured with the DateTime of occurence (this allows us to place less ‘weight’ on older events if/where desired).
+* Events could be handled realtime, 1-by-1 as they fire, or, they could be processed in batches.
 
 ### Event Types & Frequency
 
