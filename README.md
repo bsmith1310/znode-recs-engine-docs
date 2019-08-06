@@ -4,15 +4,7 @@ Function documentation relating to a new Recommendation Engine feature.
 
 First phase release targeting Q3 2019.
 
-## Phase 1
-
-![Diagram](docs/_assets/home-page.png)
-
-![Diagram](docs/_assets/cross-sell.png)
-
-![Diagram](docs/_assets/up-sell.png)
-
-## Terminology
+## Introductory Terminology
 
 **Recommendation Engine** - A system that recommends products that users are likely to buy. The rest of this document refers to this simply as the “engine”.
 
@@ -81,6 +73,10 @@ When shopper A browses the store (while being logged in):
 * The Home Page will recommend products that any shoppers have purchased together with any products that shopper A has purchased.
 * The PDP will recommend products that any shoppers have purchased together with the product currently being viewed.
 * The Cart Page will recommend products that any shoppers have purchased together with any of the products currently in the cart.
+
+<img src="docs/_assets/home-page.png" alt="drawing" width="30%"/>
+<img src="docs/_assets/cross-sell.png" alt="drawing" width="30%"/>
+<img src="docs/_assets/up-sell.png" alt="drawing" width="30%"/>
 
 The above rules inform the matches, ie: which products should be recommended. The next step is determining the score (determining display order) of those recommended products (similar to the search functionality's 'relevancy' score). Long term, this value can be calculated by taking many factors into consideration, but for the first phase I want to start with #1. We can also discuss whether we think #2 would be good to do.
 
