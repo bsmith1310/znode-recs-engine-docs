@@ -4,6 +4,21 @@ Function documentation relating to a new Recommendation Engine feature.
 
 First phase release targeting Q3 2019.
 
+## Functional Scope of First Phase(s)
+
+When shopper A browses the store (while being logged in):
+
+* The Home Page will recommend products that any shoppers have purchased together with any products that shopper A has purchased.
+* The PDP will recommend products that any shoppers have purchased together with the product currently being viewed.
+* The Cart Page will recommend products that any shoppers have purchased together with any of the products currently in the cart.
+
+<img src="docs/_assets/home-page.png" alt="drawing" width="33%"/><img src="docs/_assets/cross-sell.png" alt="drawing" width="33%"/><img src="docs/_assets/up-sell.png" alt="drawing" width="33%"/>
+
+The above rules inform the matches, ie: which products should be recommended. The next step is determining the score (determining display order) of those recommended products (similar to the search functionality's 'relevancy' score). Long term, this value can be calculated by taking many factors into consideration, but for the first phase I want to start with #1. We can also discuss whether we think #2 would be good to do.
+
+1. Products purchased together most frequently are considered “related” and therefore “cross-recommended”.
+1. Building upon #1, products purchased together in larger quantities are considered even more “related” and therefore more highly “cross-recommended”.
+
 ## Introductory Terminology
 
 **Recommendation Engine** - A system that recommends products that users are likely to buy. The rest of this document refers to this simply as the “engine”.
@@ -34,6 +49,13 @@ First phase release targeting Q3 2019.
 **Match** - One product that is recommended (binary Yes/No).
 
 **Score** - Number (on an arbitrary scale) which is the relative degree to which one product is recommended (scalar value).
+
+## Miscellaneous Notes
+
+* [Google Slide Deck](https://docs.google.com/presentation/d/1mjx_E4aaJiLSAMpjT-pEXV7Ry4YEeTtiVhyQ5evdowI/edit?usp=sharing)
+* Znode should gracefully degrade in the circumstance that the recommendation engine is unable to operate for any reason. In other words, the Web Store UI will simply display no banner of recommended products when either, (1) the engine is non-operable, or (2) no products were recommended.
+  * Ex: The historical context was not yet built, so no recommendations can yet be made.
+  * Ex: The engine in not functional due to a technical issue.
 
 ## Events In-Depth
 
@@ -67,28 +89,6 @@ Ex:
 
 * Shopper places order.
 
-## Functional Scope of First Phase(s)
-
-When shopper A browses the store (while being logged in):
-
-* The Home Page will recommend products that any shoppers have purchased together with any products that shopper A has purchased.
-* The PDP will recommend products that any shoppers have purchased together with the product currently being viewed.
-* The Cart Page will recommend products that any shoppers have purchased together with any of the products currently in the cart.
-
-<img src="docs/_assets/home-page.png" alt="drawing" width="33%"/><img src="docs/_assets/cross-sell.png" alt="drawing" width="33%"/><img src="docs/_assets/up-sell.png" alt="drawing" width="33%"/>
-
-The above rules inform the matches, ie: which products should be recommended. The next step is determining the score (determining display order) of those recommended products (similar to the search functionality's 'relevancy' score). Long term, this value can be calculated by taking many factors into consideration, but for the first phase I want to start with #1. We can also discuss whether we think #2 would be good to do.
-
-1. Products purchased together most frequently are considered “related” and therefore “cross-recommended”.
-1. Building upon #1, products purchased together in larger quantities are considered even more “related” and therefore more highly “cross-recommended”.
-
-## Miscellaneous Notes
-
-* [Google Slide Deck](https://docs.google.com/presentation/d/1mjx_E4aaJiLSAMpjT-pEXV7Ry4YEeTtiVhyQ5evdowI/edit?usp=sharing)
-* Znode should gracefully degrade in the circumstance that the recommendation engine is unable to operate for any reason. In other words, the Web Store UI will simply display no banner of recommended products when either, (1) the engine is non-operable, or (2) no products were recommended.
-  * Ex: The historical context was not yet built, so no recommendations can yet be made.
-  * Ex: The engine in not functional due to a technical issue.
-
 ## Outstanding Questions
 
 * Need to decide how to handle multi-catalog nature of Znode.
@@ -102,6 +102,8 @@ The above rules inform the matches, ie: which products should be recommended. Th
 * How to handle products like “gatorade”, which Justin King gives as an example of a product that tends to be purchased on many orders, but isn’t necessarily related to the products with which it is purchased.
 
 ## Sequence Diagram
+
+TODO - Diagram below is a placeholder to be replaced/updated w/Recs Engine:
 
 ![Diagram](docs/_assets/sequence-diagram.svg)
 
