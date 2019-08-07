@@ -100,6 +100,8 @@ Ex:
       * ... this would make the API’s/engine’s life easier, at the expense of unnecessary results transferring to Web Store, and the Web Store bearing the burden of doing the filtering.
     * Consider these points makes me lean towards having the API service logic that wraps the engine be responsible for filtering the products.
 * How to handle products like “gatorade”, which Justin King gives as an example of a product that tends to be purchased on many orders, but isn’t necessarily related to the products with which it is purchased.
+* How to persist engine model?
+  * Consider simply JSON ser/deserialzation to a SQL DB field, with a version number attached (internal/external of JSON document)
 
 ## Sequence Diagram
 
